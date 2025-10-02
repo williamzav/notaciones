@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Expresiones</title>
+    <link rel="stylesheet" href="./public/css/b5/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/font_awesome/all.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="./public/js/font_awesome/all.js"></script>
+    <script src="./public/js/b5/popper.js"></script>
+    <script src="./public/js/b5/bootstrap.js"></script>
+    <script src="./public/js/leader-line.js"></script>
+    <script src="./public/js/jquery/jquery.js"></script>
+</head>
+
+<body class="bg-light" style="font-family: 'Poppins', sans-serif;">
+    <div class="container py-4">
+        <!-- Título -->
+        <div class="text-center mb-4">
+            <h1 class="text-primary fw-bold">Calculadora - Árbol de Expresiones</h1>
+            <p class="text-muted">Convierte expresiones matemáticas en infija, prefija, postfija y muestra su resultado.</p>
+        </div>
+
+        <!-- Entrada -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <label for="expresion" class="form-label fw-semibold">Ingrese una operación matemática simple</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="expresion" placeholder="Ejemplo: (10+2)*2">
+                            <button id="btn_generar" class="btn btn-primary">Generar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-primary">
+                    <div class="card-header bg-primary text-white fw-semibold">
+                        Árbol de Expresión
+                    </div>
+                    <div class="card-body text-center" id="contenido_arbol" style="min-height: 200px;">
+                         Aquí se genera el árbol dinámicamente 
+                        <small class="text-muted">El árbol aparecerá aquí</small>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Resultados -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white fw-semibold">
+                        Resultados
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-md-6"><strong>Infija:</strong></div>
+                            <div class="col-md-6 text-muted" id="infija"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6"><strong>Prefija:</strong></div>
+                            <div class="col-md-6 text-muted" id="prefija"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6"><strong>Postfija:</strong></div>
+                            <div class="col-md-6 text-muted" id="postfija"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6"><strong>Resultado:</strong></div>
+                            <div class="col-md-6 text-muted" id="resultado"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><strong>Tiempo de ejecución:</strong></div>
+                            <div class="col-md-6 text-muted"><span id="tiempo"></span> ms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/main.js"></script>
+</body> 
+
+</html>
